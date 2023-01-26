@@ -1,0 +1,2 @@
+#!/bin/env bash
+gcc -o $CFILE c 
