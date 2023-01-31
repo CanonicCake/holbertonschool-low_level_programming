@@ -4,17 +4,17 @@
 /**
  * main - Entry point
  *
- * Return: 0 Always (Success)
+ * Return: Always 0
  */
 
 int main(void)
 
 {
-	char c;
-	int i;
-	long int l;
-	long long int o;
-	float f;
+char c;
+int i;
+long int l;
+long long int o;
+float f;
 
 	printf("Size of char: %i byte(s)\n", (unsigned long) sizeof(c));
 	printf("Size of an int: %i byte(s)\n", (unsigned long) sizeof(i));
