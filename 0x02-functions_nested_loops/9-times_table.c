@@ -13,7 +13,6 @@ void times_table(void)
 	while (r <= 9)
 	{
 		_putchar('0');
-		r++;
 		for (c = 1; c <= 9; c++)
 		{
 			multi = r * c;
@@ -33,5 +32,6 @@ void times_table(void)
 			}
 		}
 		_putchar(10);
+		r++;
 	}
 }
