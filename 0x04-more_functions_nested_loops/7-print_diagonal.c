@@ -1,8 +1,8 @@
 #include "main.h"
 
 /**
- * print_diagonal - prints \
- * @n: variable
+ * print_diagonal - prints a diagonal
+ * @n: variables
  *
  * Return: void
  */
