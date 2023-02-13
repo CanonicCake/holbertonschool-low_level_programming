@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _memset - sets up memory allocation
+ * memset - sets up memory allocation
  * @s: points to s
  * @b: variable b
  * @n: unsigned n
