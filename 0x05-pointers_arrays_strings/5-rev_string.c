@@ -7,7 +7,7 @@
  * Return: void Always
  */
 
-void re_string(char *s)
+void rev_string(char *s)
 {
 
 	int i, c, l = 1;
