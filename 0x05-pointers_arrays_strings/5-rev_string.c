@@ -4,13 +4,13 @@
  * rev_string - reverse string
  * @s: points to s
  *
- * Return: void Always
+ * Return: void
  */
 
 void rev_string(char *s)
 {
 
-	int i, c, l = 1;
+	int i, c, len = 1;
 	char *a, rev;
 
 	a = s;
@@ -19,9 +19,9 @@ void rev_string(char *s)
 	{
 		c++;
 	}
-	while (l < c)
+	while (len < c)
 	{
-		l++;
+		len++;
 		a++;
 	}
 	for (i = 0; i < (c / 2); i++)
