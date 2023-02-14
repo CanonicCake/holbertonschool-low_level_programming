@@ -1,17 +1,13 @@
-#include "main.h"
-
 /**
- * memset - sets up memory allocation
- * @s: points to s
- * @b: variable b
- * @n: unsigned n
+ * _memset - Fill n bytes of memory area pointed to with constant byte
+ * @s: Area pointed to
+ * @b: Byte to fill it with
+ * @n: Amount to fill it wih
  *
- * Retrun: pointer to memory
+ * Return: Pointer to memory area
  */
-
 char *_memset(char *s, char b, unsigned int n)
 {
-
 	unsigned int i;
 
 	i = 0;
@@ -22,3 +18,4 @@ char *_memset(char *s, char b, unsigned int n)
 	}
 	return (s);
 }
+
