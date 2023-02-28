@@ -34,13 +34,17 @@ char *str_concat(char *s1, char *s2)
 			s2len++;
 		s2len++;
 	}
+	if (s2len == 0)
+	{
+		s1len++;
+	}
 	a = malloc((s1len + s2len) * sizeof(char));
 	if (a == NULL)
 	{
 		return (NULL);
 	}
 
-	for(i = 0; i < s1len; i++)
+	for (i = 0; i < s1len; i++)
 	{
 		a[i] = s1[i];
 	}
