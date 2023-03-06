@@ -1,7 +1,3 @@
-#include "function_pointers.h"
-#include <stdio.h>
-#include <stdlib.h>
-
 /**
  * print_name - function prints a name
  *@name: char of inputted name
