@@ -4,7 +4,6 @@
 
 /**
  * print_name - function prints a name
- *
  *@name: char of inputted name
  *@f: function pointer
  *
@@ -13,7 +12,6 @@
 
 void print_name(char *name, void (*f)(char *))
 {
-	if (f)
 	{
 		f(name);
 	}
