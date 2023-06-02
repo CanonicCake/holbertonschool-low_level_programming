@@ -13,13 +13,11 @@ void rev_string(char *s)
 	int c, len = 0;
 	char rev;
 
-	a = s;
-
 	while (s[len] != '\0')
 	{
 		len++;
 	}
-	
+
 	len--;
 
 	for (c = 0; c < len; c++)
