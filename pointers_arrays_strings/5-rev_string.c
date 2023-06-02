@@ -10,23 +10,23 @@
 void rev_string(char *s)
 {
 
-	int i, c, len = 1;
-	char *a, rev;
+	int c, len = 0;
+	char rev;
 
 	a = s;
 
-	while (s[c] != '\0')
-	{
-		c++;
-	}
-	while (len < c)
+	while (s[len] != '\0')
 	{
 		len++;
-		a++;
 	}
-	for (i = 0; i < (c / 2); i++)
-	rev = s[i];
-	s[i] = *a;
-	*a = rev;
-	a--;
+	
+	len--;
+
+	for (c = 0; c < len; c++)
+	{
+		rev = s[len];
+		s[len] = s[c];
+		s[c] = rev;
+		len--;
+	}
 }
