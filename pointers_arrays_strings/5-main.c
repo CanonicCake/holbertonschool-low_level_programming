@@ -1,18 +1,18 @@
-#include "holberton.h"
+#include "main.h"
 #include <stdio.h>
 
 /**
- * main - check the code for Holberton School students.
+ * main - check the code
  *
  * Return: Always 0.
  */
 int main(void)
 {
-    char str[] = "Holberton School!\n";
-    char *ptr;
+    char *s = "hello, world";
+    char *f = "world";
+    char *t;
 
-    ptr = string_toupper(str);
-    printf("%s", ptr);
-    printf("%s", str);
+    t = _strstr(s, f);
+    printf("%s\n", t);
     return (0);
 }
