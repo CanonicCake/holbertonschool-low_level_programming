@@ -5,6 +5,13 @@
 #include "lists.h"
 #include <string.h>
 
+/**
+ * print_list - prints acording to list_t
+ * @h: variable
+ *
+ * Return: nodes
+ */
+
 size_t print_list(const list_t *h)
 {
 	size_t first = 0;
@@ -23,3 +30,4 @@ size_t print_list(const list_t *h)
 		first++;
 	}
 	return (first);
+}
