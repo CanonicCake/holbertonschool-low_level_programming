@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 /**
- * add_node - adds a node to the list
+ * free_list - frees list space
  * @head: pointer to the head
  */
 
