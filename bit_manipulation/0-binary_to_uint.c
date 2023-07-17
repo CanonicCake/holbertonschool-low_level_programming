@@ -9,7 +9,7 @@
  * Reurn: converted number
  */
 
-unsigned int binary_to_unit(const char *b)
+unsigned int binary_to_uint(const char *b)
 {
 	int len = 0;
 	unsigned int base = 1, result = 0;
