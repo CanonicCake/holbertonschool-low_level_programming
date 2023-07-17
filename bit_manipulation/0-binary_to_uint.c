@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 /**
- * binary_to_unit - converts binary to a unit
+ * binary_to_uint - converts binary to a unit
  * @b: address
  *
  * Reurn: converted number
@@ -26,7 +26,7 @@ unsigned int binary_to_uint(const char *b)
 
 	while (len)
 	{
-		if (b[len - 1] != '0' && b[len -1] != '1')
+		if (b[len - 1] != '0' && b[len - 1] != '1')
 		{
 			return (0);
 		}
