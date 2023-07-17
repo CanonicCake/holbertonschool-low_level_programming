@@ -9,7 +9,7 @@
  * Return: total sum of listint
  */
 
-int sum_listint(listint *head)
+int sum_listint(listint_t *head)
 {
 	int sum = 0;
 
