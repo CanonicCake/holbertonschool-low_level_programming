@@ -9,7 +9,7 @@
  * Return: bit, and -1 on fail
  */
 
-int get_bit(unsigned long int n, unsigned long int index)
+int get_bit(unsigned long int n, unsigned int index)
 {
 	if (sizeof(n) * 8 < index)
 	{
