@@ -16,7 +16,7 @@ unsigned int binary_to_unit(const char *b)
 
 	if (b == NULL)
 	{
-		retrun (0);
+		return (0);
 	}
 
 	while (b[len])
