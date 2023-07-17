@@ -5,7 +5,7 @@
 /**
  * delete_nodeint_at_index - will delete the node from index
  * @head: head node
- * @index: the index to remove node from 
+ * @index: the index to remove node from
  *
  * Return: 1 when deleted, -1 if node is not deleted
  */
