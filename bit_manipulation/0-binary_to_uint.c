@@ -12,7 +12,7 @@
 unsigned int binary_to_unit(const char *b)
 {
 	int len = 0;
-	unsigned int head = 1, end = 0;
+	unsigned int base = 1, result = 0;
 
 	if (b == NULL)
 	{
@@ -32,10 +32,10 @@ unsigned int binary_to_unit(const char *b)
 		}
 		if (b[len - 1] == '1')
 		{
-			end += head;
+			result += base;
 		}
-		head *= 2;
+		base *= 2;
 		len--;
 	}
-	return (end);
+	return (result);
 }
