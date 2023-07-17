@@ -34,7 +34,7 @@ unsigned int binary_to_unit(const char *b)
 		{
 			end += head;
 		}
-		head += 2;
+		head *= 2;
 		len--;
 	}
 	return (end);
