@@ -6,7 +6,7 @@
  * binary_to_uint - converts binary to a unit
  * @b: address
  *
- * Reurn: converted number
+ * Return: converted number
  */
 
 unsigned int binary_to_uint(const char *b)
