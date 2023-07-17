@@ -28,7 +28,7 @@ unsigned int binary_to_unit(const char *b)
 	{
 		if (b[len - 1] != '0' && b[len -1] != '1')
 		{
-			retrun (0);
+			return (0);
 		}
 		if (b[len - 1] == '1')
 		{
