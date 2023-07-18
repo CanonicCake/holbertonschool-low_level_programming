@@ -13,7 +13,7 @@ int create_file(const char *filename, char *text_content)
 	int fdopen, fdwrite, length = 0;
 
 	if (filename == NULL)
-		retrun (-1);
+		return (-1);
 
 	fdopen = open(filename, O_CREATE | O_RDWR | O_TRUNC, 00600);
 	if (fdopen == -1)
