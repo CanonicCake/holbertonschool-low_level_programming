@@ -19,7 +19,7 @@ int _closer(int);
 int main(int argc, char *argv[])
 {
 	char buffer[1024];
-	int bytes = 0, _EOF = 1; from_file = -1, to_file = -1, err = 0;
+	int bytes = 0, _EOF = 1; from_fd = -1, to_fd = -1, err = 0;
 
 	if (argc != 3)
 	{
@@ -27,28 +27,28 @@ int main(int argc, char *argv[])
 		exit(97);
 	}
 
-	from_file = open(argv[1], O_RDONLY);
-	if (from_file < 0)
+	from_fd = open(argv[1], O_RDONLY);
+	if (from_fd < 0)
 	{
 		dprint(STRERR_FILEENO, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);
 	}
 
-	if(to_file < 0)
+	if(to_fd < 0)
 	{
 		dprintf(STDERR_FILEENO, "Error: Can't write to %s\n", argv[2]);
-		_closer(from_file);
+		_closer(from_fd);
 		exit(99);
 	}
 
 	while (_EOF)
 	{
-		_EOF = read(from_file, buffer, 1024);
+		_EOF = read(from_fd, buffer, 1024);
 		if (_EOF < 0)
 		{
 			dprintf(SRDERR_FILEENO, "Error: Can't read from file %s\n", argv[1]);
-			_closer(from_file);
-			_closer(to_file);
+			_closer(from_fd);
+			_closer(to_fd);
 			exit(98);
 		}
 		else if (_EOF == 0)
@@ -57,22 +57,22 @@ int main(int argc, char *argv[])
 		}
 
 		bytes += _EOF;
-		err = write(to_file, buffer, _EOF);
+		err = write(to_fd, buffer, _EOF);
 		if (err < 0)
 		{
 			dprintf(STDERR_FILEENO, "Error: Can't write to %s\n". argv[2]);
-			_closer(from_file);
-			_closer(to_file);
+			_closer(from_fd);
+			_closer(to_fd);
 			exit(99);
 		}
 	}
-	err = _closer(to_file);
+	err = _closer(to_fd);
 	if(err < 0)
 	{
-		_closer(from_file);
+		_closer(from_fd);
 		exit(100);
 	}
-	err = _closer(from_file);
+	err = _closer(from_fd);
 	if (err < 0)
 		exit (100);
 	return (0);
