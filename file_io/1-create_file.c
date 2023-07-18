@@ -13,7 +13,9 @@ int create_file(const char *filename, char *text_content)
 	int fdopen, fdwrite, length = 0;
 
 	if (filename == NULL)
+	{
 		return (-1);
+	}
 
 	fdopen = open(filename, O_CREAT | O_RDWR | O_TRUNC, 00600);
 	if (fdopen == -1)
@@ -22,7 +24,7 @@ int create_file(const char *filename, char *text_content)
 	}
 
 	while (text_content[length] != '\0' && *(text_content + length))
-	{	
+	{
 		length++;
 	}
 
