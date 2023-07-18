@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * append_text_to_file
+ * append_text_to_file - will append a text to file
  * @filename: files name
  * @text_content: content of text
  *
@@ -36,7 +36,7 @@ int append_text_to_file(const char *filename, char *text_content)
 
 	wd = write(fd, text_content, length);
 	close(fd);
-	if(wd < 0)
+	if (wd < 0)
 	{
 		return (-1);
 	}
