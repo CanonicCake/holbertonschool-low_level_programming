@@ -2,7 +2,7 @@
 #include <string.h>
 
 /**
- * hash_table_set  sets the hash tables
+ * hash_table_set - sets the hash tables
  * @ht: hash table
  * @key: key
  * @value: value of the key
@@ -20,7 +20,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 	index = key_index((const unsigned char *)key, ht->size);
 	head = ht->array[index];
-	
+
 	if (head && strcmp(key, head->key) == 0)
 	{
 		free(head->value);
