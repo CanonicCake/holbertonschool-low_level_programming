@@ -53,7 +53,7 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 	}
 	if (index == (len - 1))
 	{
-		while (curent->next)
+		while (current->next)
 		{
 			current = current->next;
 		}
