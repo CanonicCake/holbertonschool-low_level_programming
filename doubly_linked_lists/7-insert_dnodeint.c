@@ -26,7 +26,7 @@ dlistint_t *create_node(unsigned int n, void *next, void *prev)
 }
 
 /**
- * insert_dnode_at_index - insert at certain files
+ * insert_dnodeint_at_index - insert at certain files
  * @h: the head of multiple lists
  * @idx: indexs to pull from
  * @n: nodes
@@ -51,7 +51,7 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	len = dlistint_len(*h);
 	if (idx == 0)
 		return (add_dnodeint(h, n));
-	else if (len == idx -1)
+	else if (len == idx)
 		return (add_dnodeint_end(h, n));
 
 	current = *h;
