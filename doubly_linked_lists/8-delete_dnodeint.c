@@ -3,6 +3,7 @@
 
 int delete_first_dnode(dlistint_t **head);
 size_t dlistint_len(const dlistint_t *h);
+dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index);
 
 /**
  * delete_dnodeint_at_index - delete node
@@ -81,6 +82,35 @@ int delete_first_dnode(dlistint_t **head)
  * Return: node grabbed
  */
 
+dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
+{
+
+	dlistint_t *current = head;
+	unsigned int counter = 0;
+
+	if (head)
+	{
+		while (current != NULL)
+		{
+			if (counter == index)
+			{
+				return (current);
+			}
+			
+			currnet = current->next;
+			++counter;
+		}
+	}
+
+	return (NULL);
+}
+
+/**
+ * dlistint_len - finds len
+ * @h: head
+ *
+ * Return: len
+ */
 size_t dlistint_len(const dlistint_t *h)
 {
 	int len = 0;
