@@ -31,7 +31,7 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 		if (current)
 		{
 			temp = current;
-			if (len -1 == index)
+			if (len - 1 == index)
 				current->prev->next = current->next;
 			else
 			{
@@ -95,8 +95,7 @@ dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
 			if (counter == index)
 			{
 				return (current);
-			}
-			
+			}			
 			current = current->next;
 			++counter;
 		}
