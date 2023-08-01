@@ -7,7 +7,7 @@
  * Return: nodes
  */
 
-size_t dlistint_t(const dlistint_t *h)
+size_t dlistint_len(const dlistint_t *h)
 {
 	int counter = 0;
 
