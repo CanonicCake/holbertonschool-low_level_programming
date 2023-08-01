@@ -3,7 +3,7 @@
 /**
  * get_dnodeint_at_index - grabs node at index
  * @head: head of list
- * @index - index to go to
+ * @index: index to go to
  *
  * Return: node
  */
