@@ -3,7 +3,7 @@
 /**
  * add_dnodeint - adds a node at the beginning
  * @head: head of the linkned list
- * @h: variable
+ * @n: variable
  *
  * Return: the new head
  */
@@ -19,7 +19,7 @@ dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 	}
 
 	new->n = n;
-	if(*head)
+	if (*head)
 	{
 		new->next = *head;
 		new->prev = (*head)->prev;
