@@ -1,75 +1,95 @@
 #include "lists.h"
 
-/**
- * dlistint_len - find len
- * @h: head
- *
- * Return: nodes
- */
 
-size_t dlistint_len(const dlistint_t *h)
-{
-	int counter = 0;
+int delete_first_dnode(dlistint_t **head);
 
-	while (h)
-	{
-		counter++;
-		h = h->next;
-	}
-	return (counter);
-}
 
 /**
- * delete_dnodeint_at_index - deletes at index
- * @head: the head of the list
- * index: index to delete at
+ * delete_dnodeint_at_index - delete node
+ * @head: head of list
+ * @index: index
  *
- * Return: 1 on success, -1 if failed
+ * Return: 1 on success, -1 on failure
  */
 
 int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 {
-	dlistint_t *current;
-	size_t len;
-	unsigned int i = 0;
+	dlistint_t *current = NULL, *temp = NULL;
+	unsigned int len = 0;
 
-	if (head == NULL || *head == NULL)
-		return (-1);
+	if (head && *head)
+	{
+		len = dlistint_len(*head);
+		if (index > len)
+			return (-1);
 
-	len = dlistint_len(*head);
-	if (index >= len)
-		return (-1);
+		if (index == 0)
+			return (delete_first_node);
 
-	current = *head;
-	if (index == 0)
-	{
-		*head = current->next;
-		if (*head != NULL)
+		current = get_dnodeint_at_index(*head, index);
+		if (current)
 		{
-			(*head)->prev = NULL;
-		}
-		free(current);
-		return (1);
-	}
-	if (index == len)
-	{
-		while (current->next)
-		{
-			current = current->next;
-		}
-		free(current);
-	}
-	while (current)
-	{
-		if (i == index)
-		{
-			current->next->prev = current->prev;
-			current->prev->next = current->next;
-			free(current);
+			temp = current;
+			if (len -1 == index)
+				current->prev->next = current->next;
+			else
+			{
+				current->prev->next = current->next;
+				current->next->prev = current->prev;
+			}
+
+			free(temp);
 			return (1);
 		}
-		current = current->next;
-		i++;
 	}
 	return (-1);
+}
+
+/**
+ * delete_first_dnode - Remove node
+ * @head: the head of the list
+ *
+ * Return: 1 on success of function
+ */
+
+int delete_first_dnode(dlistint_t **head)
+{
+
+	dlistint_t *current = *head, *temp = NULL;
+
+	temp = current;
+	if (current->next)
+	{
+		current = current->next;
+		current->prev = temp->prev;
+		*head = current;
+	}
+	else
+	{
+		*head = NULL;
+	}
+
+	free(temp);
+	return (1);
+}
+
+/**
+ * get_dnodeint_at_index - grabs node
+ * @head: head of list
+ * @index: index
+ *
+ * Return: node grabbed
+ */
+
+size_t dlistint_len(const dlistint_t *h)
+{
+	int len = 0;
+
+	while (h != NULL)
+	{
+		++len;
+		h = h->next;
+	}
+
+	return (len);
 }
