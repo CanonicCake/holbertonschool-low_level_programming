@@ -2,7 +2,7 @@
 
 
 int delete_first_dnode(dlistint_t **head);
-
+size_t dlistint_len(const dlistint_t *h);
 
 /**
  * delete_dnodeint_at_index - delete node
@@ -24,7 +24,7 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 			return (-1);
 
 		if (index == 0)
-			return (delete_first_node);
+			return (delete_first_dnode);
 
 		current = get_dnodeint_at_index(*head, index);
 		if (current)
