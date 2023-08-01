@@ -8,7 +8,7 @@
  * Return: node
  */
 
-dlistint_t *get_dnode_at_index(dlistint_t *head, unsigned int index)
+dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
 {
 	dlistint_t *current = head;
 	unsigned int counter = 0;
