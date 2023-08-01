@@ -1,6 +1,31 @@
 #include "lists.h"
 
 /**
+ * create_node - create a node
+ * @n: variable
+ * @next: next variable
+ * @prev: previous node
+ *
+ * Return: address
+ */
+
+dlistint_t *create_node(unsigned int n, void *next, void *prev)
+{
+	dlistint_t *new = NULL;
+
+	new = malloc(sizeof(dlistint_t));
+	if (new == NULL)
+	{
+		return (NULL);
+	}
+
+	new->n = n;
+	new->next = next;
+	new->prev = prev;
+	return (new);
+}
+
+/**
  * insert_dnode_at_index - insert at certain files
  * @h: the head of multiple lists
  * @idx: indexs to pull from
@@ -65,29 +90,4 @@ size_t dlistint_len(const dlistint_t *h)
 	}
 
 	return (len);
-}
-
-/**
- * create_node - create a node
- * @n: variable
- * @next: next variable
- * @prev: previous node
- *
- * Return: address
- */
-
-dlistint_t *create_node(unsigned int n, void *next, void *prev)
-{
-	dlistint_t *new = NULL;
-
-	new = malloc(sizeof(dlistint_t));
-	if (new == NULL)
-	{
-		return (NULL);
-	}
-
-	new->n = n;
-	new->next = next;
-	new->prev = prev;
-	return (new);
 }
