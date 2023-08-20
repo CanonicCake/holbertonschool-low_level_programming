@@ -7,7 +7,7 @@
  * Return: void
  */
 
-void hash_table_print(count hash_table_t *ht)
+void hash_table_print(const hash_table_t *ht)
 {
 	size_t i = 0;
 	hash_node_t temp;
