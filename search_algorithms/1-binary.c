@@ -2,7 +2,7 @@
 
 /**
  * print_array - prints an array
- * @array[]: prints an array from location []
+ * @array: prints an array from left to right
  * @left: left of array
  * @right: right of array
  *
